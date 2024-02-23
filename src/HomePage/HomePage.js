@@ -36,7 +36,7 @@ function HomePage() {
   
 
   function getBudget() {
-    axios.get("/budget.json").then(function (res) {
+    axios.get("http://localhost:3001/budget").then(function (res) {
       console.log(res);
       for (var i = 0; i < res.data.myBudget.length; i++) {
         dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
